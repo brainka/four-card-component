@@ -1,0 +1,169 @@
+:root {
+	--red-highlight: #ea5454;
+	--green-highlight: #44d3d2;
+	--yellow-highlight: #fcae4a;
+	--blue-highlight: #549ef2;
+	--main-font-color: #4d4f62;
+	--main-background: #fafafa;
+	--card-background: #ffffff;
+	--main-font: ' Poppins ', sans-serif;
+	--secondary-font-color: #a6a7b1;
+	--extra-light: 200;
+	--semi-bold: 600;
+	--regular: 400;
+	--box-shadow: 0px 17px 28px -11px rgba(0, 0, 0, 0.26);
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	text-size-adjust: none;
+}
+
+body {
+	min-height: 100vh;
+	line-height: 1.5;
+	background-color: var(--main-background);
+	font-family: var(--main-font);
+	color: var(--main-font-color);
+	font-weight: var(--regular);
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+
+main {
+	display: grid;
+	gap: 64px;
+}
+
+.information {
+	justify-self: center;
+	width: 490px;
+	text-align: center;
+	display: grid;
+	gap: 13px;
+}
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 30px 1fr 30px 1fr;
+	grid-template-rows: 140px 110px 30px 110px 140px;
+	width: 100%;
+	max-width: 1110px;
+}
+
+.card {
+	border-radius: 8px;
+	background-color: var(--card-background);
+	padding: 32px;
+	justify-content: space-between;
+
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+
+	box-shadow: var(--box-shadow);
+}
+
+.card-team-builder {
+	border-top: 4px solid var(--red-highlight);
+	grid-area: 1 / 3 /3 /4;
+}
+
+.card-calculator {
+	border-top: 4px solid var(--blue-highlight);
+	grid-area: 2/5/5/6;
+}
+
+.card-karma {
+	border-top: 4px solid var(--yellow-highlight);
+	grid-area: 4 / 3 / 6 / 4;
+}
+
+.card-supervisor {
+	border-top: 4px solid var(--green-highlight);
+	grid-area: 2/1/5/2;
+}
+
+img {
+	width: 64px;
+	align-self: flex-end;
+}
+
+h1 {
+	letter-spacing: 0.25px;
+}
+
+h1 span {
+	font-weight: 200;
+}
+
+h2.top {
+	font-size: 20px;
+}
+
+main p {
+	color: var(--secondary-font-color);
+	font-size: 15px;
+}
+
+main p,
+p.card {
+	font-weight: 100;
+}
+
+.top > p {
+	font-size: 13px;
+	/* width: 286px; */
+}
+
+.top {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.top p span {
+	color: #d3d3d8;
+}
+
+@media screen and (max-width: 705px) {
+	main {
+		padding: 85px 32px;
+	}
+
+	h1 {
+		font-size: 24px;
+	}
+
+	p.information {
+		font-size: 15px;
+	}
+
+	.information {
+		width: unset;
+	}
+
+	.cards {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.card {
+		padding: 28px;
+	}
+
+	img {
+		width: 57px;
+	}
+}
